@@ -16,8 +16,10 @@ cube.add_dim_coord(DimCoord([1,2,3], long_name="w"), 0)
 
 print "------------------"
 print cube
+print "shape", cube.shape
 
 mean = cube.aggregated_by("w", iris.analysis.MEAN)
 mean.long_name = "aggregated_cube"
 print "------------------"
 print mean
+print "shape", mean.shape
