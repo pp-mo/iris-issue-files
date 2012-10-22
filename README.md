@@ -1,4 +1,5 @@
 iris_issue_files
 ================
 
-Files for reference by Iris issues, such as files that fail to load.
+This repo can be used to upload data files
+or utility programs etc that don't belong inside Iris.
