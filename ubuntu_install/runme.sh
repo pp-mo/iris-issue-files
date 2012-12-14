@@ -81,11 +81,11 @@ sudo make install
 cd ..
 rm grib_api-1.9.18.tar.gz
 rm -rf grib_api-1.9.18
-sudo mkdir ~/.local
-sudo mkdir ~/.local/lib
-sudo mkdir ~/.local/lib/python2.7
-sudo mkdir ~/.local/lib/python2.7/site-packages
-sudo ln -s /usr/local/lib/python2.7/site-packages/gribapi ~/.local/lib/python2.7/site-packages/gribapi
+mkdir ~/.local
+mkdir ~/.local/lib
+mkdir ~/.local/lib/python2.7
+mkdir ~/.local/lib/python2.7/site-packages
+ln -s /usr/local/lib/python2.7/site-packages/gribapi ~/.local/lib/python2.7/site-packages/gribapi
 
 
 ############
