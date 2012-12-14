@@ -39,6 +39,7 @@ sudo apt-get build-dep matplotlib
 wget https://github.com/downloads/matplotlib/matplotlib/matplotlib-1.2.0.tar.gz
 tar -xvf matplotlib-1.2.0.tar.gz
 cd matplotlib-1.2.0
+python setup.py build
 sudo python setup.py install
 cd ..
 rm -rf matplotlib-1.2.0
