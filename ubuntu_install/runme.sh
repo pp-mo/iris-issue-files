@@ -88,24 +88,6 @@ mkdir ~/.local/lib/python2.7/site-packages
 ln -s /usr/local/lib/python2.7/dist-packages/grib_api ~/.local/lib/python2.7/site-packages/gribapi
 
 
-############
-### iris ###
-############
-
-git clone git://github.com/SciTools/iris.git
-cd iris
-python setup.py build
-sudo python setup.py install
-cd ..
-rm -rd iris
-
-
-#
-# Also...
-#   pp packing
-#   graphviz (for dot)
-#
-
 
 ###########
 # cartopy #
@@ -137,4 +119,23 @@ python setup.py build
 sudo python setup.py install
 cd ..
 rm -rf cartopy
+
+
+############
+### iris ###
+############
+
+git clone git://github.com/SciTools/iris.git
+cd iris
+python setup.py build
+sudo python setup.py install
+cd ..
+rm -rd iris
+
+
+#
+# Also...
+#   pp packing
+#   graphviz (for dot)
+#
 
