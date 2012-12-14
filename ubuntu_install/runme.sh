@@ -95,6 +95,7 @@ ln -s /usr/local/lib/python2.7/dist-packages/grib_api ~/.local/lib/python2.7/sit
 
 wget http://python-distribute.org/distribute_setup.py
 sudo python distribute_setup.py
+rm distribute*.gz
 rm distribute_setup.py
 
 # geos - this gives 3.3.3, we need 3.3.4, hence the manual install above
