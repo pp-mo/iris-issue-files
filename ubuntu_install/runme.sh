@@ -79,7 +79,7 @@ sudo python setup.py install
 cd ..
 cd ..
 rm grib_api-1.9.16.tar.gz
-rm -rf grib_api-1.9.16/
+sudo rm -rf grib_api-1.9.16/
 	
 
 ###########
