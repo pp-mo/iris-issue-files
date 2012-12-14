@@ -15,7 +15,7 @@ pip install nose cython pyshp shapely pil pep8 mock pyke netCDF4
 ######### manual builds ########
 ################################
 
-# dependencies for matplotlib (1.1, but we'll install 1.2)
+## dependencies for matplotlib (1.1, but we'll install 1.2)
 sudo apt-get build-dep matplotlib
 
 # matplotlib - because ubuntu doesn't have the version we need (1.2)
@@ -28,16 +28,16 @@ cd ..
 rm matplotlib-1.2.0.tar.gz
 rm -rf matplotlib-1.2.0
 
-# geos - because ubuntu doesn't have the version we need (3.3.4)
-wget http://download.osgeo.org/geos/geos-3.3.6.tar.bz2
-tar -xvf geos-3.3.6.tar.bz2
-cd geos-3.3.6
-./configure
-make
-sudo make install
-cd ..
-rm geos-3.3.6.tar.bz2
-rm -rf geos-3.3.6
+## geos - because ubuntu doesn't have the version we need (3.3.4)
+#wget http://download.osgeo.org/geos/geos-3.3.6.tar.bz2
+#tar -xvf geos-3.3.6.tar.bz2
+#cd geos-3.3.6
+#./configure
+#make
+#sudo make install
+#cd ..
+#rm geos-3.3.6.tar.bz2
+#rm -rf geos-3.3.6
 
 
 ###############
@@ -51,17 +51,19 @@ export FCFLAGS="-fPIC -m64"
 export LDFLAGS="-fPIC -m64"
 
 # jasper
-wget http://www.ece.uvic.ca/~frodo/jasper/software/jasper-1.900.1.zip
-unzip -r jasper-1.900.1.zip
-cd jasper-1.900.1/
-./configure
-make
-sudo make install
-cd ..
-rm jasper-1.900.1.zip
-rm -rf jasper-1.900.1/
+#wget http://www.ece.uvic.ca/~frodo/jasper/software/jasper-1.900.1.zip
+#unzip -r jasper-1.900.1.zip
+#cd jasper-1.900.1/
+#./configure
+#make
+#sudo make install
+#cd ..
+#rm jasper-1.900.1.zip
+#rm -rf jasper-1.900.1/
+sudo apt-get install libjasper-dev
 	
 # gribapi
+sudo apt-get build-dep libgrib-api-1.9.9 libgrib-api-dev libgrib-api-tools
 
 # ubuntu 11
 #sudo apt-get install libgrib-api-0d-1 libgrib-api-dev libgrib-api-tools
@@ -104,6 +106,14 @@ rm -rd iris
 ###########
 # cartopy #
 ###########
+
+wget http://python-distribute.org/distribute_setup.py
+sudo python distribute_setup.py
+rm distribute_setup.py
+
+sudo apt-add-repository ppa:sharpie/for-science
+sudo apt-get update
+sudo apt-get install libgeos-dev
 
 # proj4
 wget http://download.osgeo.org/proj/proj-4.8.0.tar.gz
