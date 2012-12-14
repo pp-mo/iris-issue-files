@@ -76,6 +76,7 @@ wget https://software.ecmwf.int/wiki/download/attachments/3473437/grib_api-1.9.1
 tar -xvf grib_api-1.9.18.tar.gz
 cd grib_api-1.9.18
 ./configure --with-jasper=/usr/local/lib --disable-fortran --enable-python
+make
 sudo make install
 cd ..
 rm grib_api-1.9.18.tar.gz
