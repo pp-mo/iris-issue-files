@@ -37,7 +37,7 @@ sudo apt-get build-dep matplotlib
 
 # matplotlib
 wget https://github.com/downloads/matplotlib/matplotlib/matplotlib-1.2.0.tar.gz
-tar -xfv matplotlib-1.2.0.tar.gz
+tar -xvf matplotlib-1.2.0.tar.gz
 cd matplotlib-1.2.0
 sudo python setup.py install
 cd ..
@@ -45,7 +45,7 @@ rm -rf matplotlib-1.2.0
 
 # geos
 wget http://download.osgeo.org/geos/geos-3.3.6.tar.bz2
-tar -xfv geos-3.3.6.tar.bz2
+tar -xvf geos-3.3.6.tar.bz2
 cd geos-3.3.6
 ./configure
 make
@@ -75,7 +75,7 @@ rm -rf jasper-1.900.1/
 	
 # gribapi
 wget https://software.ecmwf.int/wiki/download/attachments/3473437/grib_api-1.9.18.tar.gz
-tar -xfv grib_api-1.9.18.tar.gz
+tar -xvf grib_api-1.9.18.tar.gz
 cd grib_api-1.9.18
 ./configure --with-jasper=/usr/local/lib --disable-fortran --enable-python
 sudo make install
@@ -111,7 +111,7 @@ rm -rd iris
 
 # proj4
 wget http://download.osgeo.org/proj/proj-4.8.0.tar.gz
-tar -xfv proj-4.8.0.tar.gz
+tar -xvf proj-4.8.0.tar.gz
 cd proj-4.8.0
 ./configure
 make
