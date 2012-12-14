@@ -85,7 +85,7 @@ mkdir ~/.local
 mkdir ~/.local/lib
 mkdir ~/.local/lib/python2.7
 mkdir ~/.local/lib/python2.7/site-packages
-ln -s /usr/local/lib/python2.7/site-packages/gribapi ~/.local/lib/python2.7/site-packages/gribapi
+ln -s /usr/local/lib/python2.7/dist-packages/gribapi ~/.local/lib/python2.7/site-packages/gribapi
 
 
 ############
