@@ -42,6 +42,7 @@ cd matplotlib-1.2.0
 python setup.py build
 sudo python setup.py install
 cd ..
+rm matplotlib-1.2.0.tar.gz
 rm -rf matplotlib-1.2.0
 
 # geos
@@ -52,6 +53,7 @@ cd geos-3.3.6
 make
 sudo make install
 cd ..
+rm geos-3.3.6.tar.bz2
 rm -rf geos-3.3.6
 
 
@@ -67,11 +69,13 @@ export LDFLAGS="-fPIC -m64"
 
 # jasper
 wget http://www.ece.uvic.ca/~frodo/jasper/software/jasper-1.900.1.zip
+tar -xvf jasper-1.900.1.zip
 cd jasper-1.900.1/
 ./configure
 make
 sudo make install
 cd ..
+rm jasper-1.900.1.zip
 rm -rf jasper-1.900.1/
 	
 # gribapi
@@ -81,6 +85,7 @@ cd grib_api-1.9.18
 ./configure --with-jasper=/usr/local/lib --disable-fortran --enable-python
 sudo make install
 cd ..
+rm grib_api-1.9.18.tar.gz
 rm -rf grib_api-1.9.18
 
 
@@ -118,6 +123,7 @@ cd proj-4.8.0
 make
 sudo make install
 cd ..
+rm proj-4.8.0.tar.gz
 rm -rf proj-4.8.0
 
 # cartopy
