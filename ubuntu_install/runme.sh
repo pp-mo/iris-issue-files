@@ -1,7 +1,4 @@
 
-# we can serach for packages to install like this:
-#   aptitude search netcdf
-
 # update ubuntu
 sudo apt-get update
 sudo apt-get upgrade
@@ -9,7 +6,6 @@ sudo apt-get upgrade
 # easy auto installs
 sudo apt-get install libudunits2-dev libhdf5-serial-dev libnetcdf-dev python2.7-dev python2.7-scipy python-pip make unzip python-setuptools
 pip install nose cython pyshp shapely pil pep8 mock pyke netCDF4
-
 
 ################################
 ######### manual builds ########
@@ -77,7 +73,6 @@ tar -xvf grib_api-1.9.16.tar.gz
 cd grib_api-1.9.16/
 ./configure --with-jasper=/usr/local/lib --disable-fortran --enable-python
 make
-make check
 sudo make install
 cd python
 sudo python setup.py install
@@ -86,8 +81,6 @@ cd ..
 rm grib_api-1.9.16.tar.gz
 rm -rf grib_api-1.9.16/
 	
-
-
 
 ###########
 # cartopy #
@@ -137,7 +130,7 @@ sudo rm -rd iris
 
 
 #
-# Also...
+# TODO:
 #   pp packing
 #   graphviz (for dot)
 #
