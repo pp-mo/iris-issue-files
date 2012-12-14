@@ -8,38 +8,29 @@ sudo apt-get upgrade
 
 ####### easy auto installs ########
 
-# bits and bobs
-sudo apt-get install libudunits2-dev
-sudo apt-get install libhdf5-serial-dev
-sudo apt-get install libnetcdf-dev
+## bits and bobs
+#sudo apt-get install libudunits2-dev
+#sudo apt-get install libhdf5-serial-dev
+#sudo apt-get install libnetcdf-dev
+#
+## python headers
+#sudo apt-get install python2.7-dev
+#
+## scipy and numpy
+#sudo apt-get install python2.7-scipy
+#
+## pip installer for python packages
+#sudo apt-get install python-pip
 
-# python headers
-sudo apt-get install python2.7-dev
-
-# scipy and numpy
-sudo apt-get install python2.7-scipy
-
-# pip installer for python packages
-sudo apt-get install python-pip
+sudo apt-get install libudunits2-dev libhdf5-serial-dev libnetcdf-dev python2.7-dev python2.7-scipy python-pip make
 
 # python packages
-pip install nose
-pip install cython
-pip install pyshp
-pip install shapely
-pip install pil
-pip install pep8
-pip install mock
-pip install pyke
-pip install netCDF4
+pip install nose cython pyshp shapely pil pep8 mock pyke netCDF4
 
 
 ################################
 ######### manual builds ########
 ################################
-
-# make, for the manual builds
-sudo apt-get install make
 
 # dependencies for matplotlib (1.1, but we'll manually intall 1.2)
 sudo apt-get build-dep matplotlib
