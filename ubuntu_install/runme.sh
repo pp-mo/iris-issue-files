@@ -29,15 +29,15 @@ rm matplotlib-1.2.0.tar.gz
 rm -rf matplotlib-1.2.0
 
 ## geos - because ubuntu doesn't have the version we need (3.3.4)
-#wget http://download.osgeo.org/geos/geos-3.3.6.tar.bz2
-#tar -xvf geos-3.3.6.tar.bz2
-#cd geos-3.3.6
-#./configure
-#make
-#sudo make install
-#cd ..
-#rm geos-3.3.6.tar.bz2
-#rm -rf geos-3.3.6
+wget http://download.osgeo.org/geos/geos-3.3.6.tar.bz2
+tar -xvf geos-3.3.6.tar.bz2
+cd geos-3.3.6
+./configure
+make
+sudo make install
+cd ..
+rm geos-3.3.6.tar.bz2
+rm -rf geos-3.3.6
 
 
 ###############
@@ -97,9 +97,10 @@ wget http://python-distribute.org/distribute_setup.py
 sudo python distribute_setup.py
 rm distribute_setup.py
 
-sudo apt-add-repository ppa:sharpie/for-science
-sudo apt-get update
-sudo apt-get install libgeos-dev
+# geos - this gives 3.3.3, we need 3.3.4, hence the manual install above
+#sudo apt-add-repository ppa:sharpie/for-science
+#sudo apt-get update
+#sudo apt-get install libgeos-dev
 
 # proj4
 wget http://download.osgeo.org/proj/proj-4.8.0.tar.gz
