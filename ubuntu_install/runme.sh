@@ -132,7 +132,8 @@ cd iris
 python setup.py build
 sudo python setup.py install
 cd ..
-rm -rd iris
+# TODO: we shouldn't need sudo for this
+sudo rm -rd iris
 
 
 #
