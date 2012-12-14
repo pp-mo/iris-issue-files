@@ -17,7 +17,7 @@ sudo apt-get install libnetcdf-dev
 sudo apt-get install python2.7-dev
 
 # scipy and numpy
-sudo apt-get install scipy
+sudo apt-get install python2.7-scipy
 
 # pip installer for python packages
 sudo apt-get install python-pip
