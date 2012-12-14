@@ -7,7 +7,7 @@ sudo apt-get update
 sudo apt-get upgrade
 
 # easy auto installs
-sudo apt-get install libudunits2-dev libhdf5-serial-dev libnetcdf-dev python2.7-dev python2.7-scipy python-pip make unzip
+sudo apt-get install libudunits2-dev libhdf5-serial-dev libnetcdf-dev python2.7-dev python2.7-scipy python-pip make unzip python-setuptools
 pip install nose cython pyshp shapely pil pep8 mock pyke netCDF4
 
 
@@ -91,8 +91,6 @@ ln -s /usr/local/lib/python2.7/dist-packages/grib_api ~/.local/lib/python2.7/sit
 ############
 ### iris ###
 ############
-
-sudo apt-get install python-setuptools
 
 git clone git://github.com/SciTools/iris.git
 cd iris
