@@ -72,20 +72,20 @@ sudo apt-get build-dep libgrib-api-1.9.9 libgrib-api-dev libgrib-api-tools
 
 #sudo apt-get install libgrib-api-1.9.9 libgrib-api-dev libgrib-api-tools
 
-wget https://software.ecmwf.int/wiki/download/attachments/3473437/grib_api-1.9.18.tar.gz --no-check-certificate
-tar -xvf grib_api-1.9.18.tar.gz
-cd grib_api-1.9.18
+wget https://software.ecmwf.int/wiki/download/attachments/3473437/grib_api-1.9.16.tar.gz --no-check-certificate
+tar -xvf grib_api-1.9.16.tar.gz
+cd grib_api-1.9.16/
 ./configure --with-jasper=/usr/local/lib --disable-fortran --enable-python
 make
+make check
 sudo make install
+cd python
+sudo python setup.py install
 cd ..
-rm grib_api-1.9.18.tar.gz
-rm -rf grib_api-1.9.18
-mkdir ~/.local
-mkdir ~/.local/lib
-mkdir ~/.local/lib/python2.7
-mkdir ~/.local/lib/python2.7/site-packages
-ln -s /usr/local/lib/python2.7/dist-packages/grib_api ~/.local/lib/python2.7/site-packages/gribapi
+cd ..
+rm grib_api-1.9.16.tar.gz
+rm -rf grib_api-1.9.16/
+	
 
 
 
