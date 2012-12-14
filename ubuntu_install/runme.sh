@@ -7,7 +7,7 @@ sudo apt-get update
 sudo apt-get upgrade
 
 # easy auto installs
-sudo apt-get install libudunits2-dev libhdf5-serial-dev libnetcdf-dev python2.7-dev python2.7-scipy python-pip make
+sudo apt-get install libudunits2-dev libhdf5-serial-dev libnetcdf-dev python2.7-dev python2.7-scipy python-pip make unzip
 pip install nose cython pyshp shapely pil pep8 mock pyke netCDF4
 
 
@@ -52,7 +52,7 @@ export LDFLAGS="-fPIC -m64"
 
 # jasper
 wget http://www.ece.uvic.ca/~frodo/jasper/software/jasper-1.900.1.zip
-tar -xvf jasper-1.900.1.zip
+unzip -r jasper-1.900.1.zip
 cd jasper-1.900.1/
 ./configure
 make
