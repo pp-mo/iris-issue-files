@@ -6,25 +6,8 @@
 sudo apt-get update
 sudo apt-get upgrade
 
-####### easy auto installs ########
-
-## bits and bobs
-#sudo apt-get install libudunits2-dev
-#sudo apt-get install libhdf5-serial-dev
-#sudo apt-get install libnetcdf-dev
-#
-## python headers
-#sudo apt-get install python2.7-dev
-#
-## scipy and numpy
-#sudo apt-get install python2.7-scipy
-#
-## pip installer for python packages
-#sudo apt-get install python-pip
-
+# easy auto installs
 sudo apt-get install libudunits2-dev libhdf5-serial-dev libnetcdf-dev python2.7-dev python2.7-scipy python-pip make
-
-# python packages
 pip install nose cython pyshp shapely pil pep8 mock pyke netCDF4
 
 
@@ -32,10 +15,10 @@ pip install nose cython pyshp shapely pil pep8 mock pyke netCDF4
 ######### manual builds ########
 ################################
 
-# dependencies for matplotlib (1.1, but we'll manually intall 1.2)
+# dependencies for matplotlib (1.1, but we'll install 1.2)
 sudo apt-get build-dep matplotlib
 
-# matplotlib
+# matplotlib - because ubuntu doesn't have the version we need (1.2)
 wget https://github.com/downloads/matplotlib/matplotlib/matplotlib-1.2.0.tar.gz
 tar -xvf matplotlib-1.2.0.tar.gz
 cd matplotlib-1.2.0
@@ -45,7 +28,7 @@ cd ..
 rm matplotlib-1.2.0.tar.gz
 rm -rf matplotlib-1.2.0
 
-# geos
+# geos - because ubuntu doesn't have the version we need (3.3.4)
 wget http://download.osgeo.org/geos/geos-3.3.6.tar.bz2
 tar -xvf geos-3.3.6.tar.bz2
 cd geos-3.3.6
@@ -79,15 +62,21 @@ rm jasper-1.900.1.zip
 rm -rf jasper-1.900.1/
 	
 # gribapi
-wget https://software.ecmwf.int/wiki/download/attachments/3473437/grib_api-1.9.18.tar.gz
-tar -xvf grib_api-1.9.18.tar.gz
-cd grib_api-1.9.18
-./configure --with-jasper=/usr/local/lib --disable-fortran --enable-python
-sudo make install
-cd ..
-rm grib_api-1.9.18.tar.gz
-rm -rf grib_api-1.9.18
 
+# ubuntu 11
+sudo apt-get install libgrib-api-0d-1 libgrib-api-dev libgrib-api-tools
+
+# ubuntu 12
+#sudo apt-get install libgrib-api-1.9.9 libgrib-api-dev libgrib-api-tools
+
+#wget https://software.ecmwf.int/wiki/download/attachments/3473437/grib_api-1.9.18.tar.gz
+#tar -xvf grib_api-1.9.18.tar.gz
+#cd grib_api-1.9.18
+#./configure --with-jasper=/usr/local/lib --disable-fortran --enable-python
+#sudo make install
+#cd ..
+#rm grib_api-1.9.18.tar.gz
+#rm -rf grib_api-1.9.18
 
 
 ############
