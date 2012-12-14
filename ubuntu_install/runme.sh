@@ -64,10 +64,10 @@ rm -rf jasper-1.900.1/
 # gribapi
 
 # ubuntu 11
-sudo apt-get install libgrib-api-0d-1 libgrib-api-dev libgrib-api-tools
+#sudo apt-get install libgrib-api-0d-1 libgrib-api-dev libgrib-api-tools
 
 # ubuntu 12
-#sudo apt-get install libgrib-api-1.9.9 libgrib-api-dev libgrib-api-tools
+sudo apt-get install libgrib-api-1.9.9 libgrib-api-dev libgrib-api-tools
 
 #wget https://software.ecmwf.int/wiki/download/attachments/3473437/grib_api-1.9.18.tar.gz
 #tar -xvf grib_api-1.9.18.tar.gz
