@@ -70,7 +70,7 @@ rm -rf jasper-1.900.1/
 
 #sudo apt-get install libgrib-api-1.9.9 libgrib-api-dev libgrib-api-tools
 
-wget https://software.ecmwf.int/wiki/download/attachments/3473437/grib_api-1.9.18.tar.gz
+wget https://software.ecmwf.int/wiki/download/attachments/3473437/grib_api-1.9.18.tar.gz --no-check-certificate
 tar -xvf grib_api-1.9.18.tar.gz
 cd grib_api-1.9.18
 ./configure --with-jasper=/usr/local/lib --disable-fortran --enable-python
