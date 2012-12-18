@@ -4,7 +4,7 @@ sudo apt-get -y -q update
 sudo apt-get -y -q upgrade
 
 # easy auto installs
-sudo apt-get -y -q install libudunits2-dev libhdf5-serial-dev libnetcdf-dev python2.7-dev python2.7-scipy python-pip make unzip python-setuptools
+sudo apt-get -y -q install libudunits2-dev libhdf5-serial-dev libnetcdf-dev python2.7-dev python2.7-scipy python-pip make unzip python-setuptools git
 pip install nose cython pyshp shapely pil pep8 mock pyke netCDF4
 
 ################################
