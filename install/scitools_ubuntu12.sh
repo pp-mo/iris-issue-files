@@ -1,10 +1,10 @@
 
 # update ubuntu
-sudo apt-get update
-sudo apt-get upgrade
+sudo apt-get -y -q update
+sudo apt-get -y -q upgrade
 
 # easy auto installs
-sudo apt-get install libudunits2-dev libhdf5-serial-dev libnetcdf-dev python2.7-dev python2.7-scipy python-pip make unzip python-setuptools
+sudo apt-get -y -q install libudunits2-dev libhdf5-serial-dev libnetcdf-dev python2.7-dev python2.7-scipy python-pip make unzip python-setuptools
 pip install nose cython pyshp shapely pil pep8 mock pyke netCDF4
 
 ################################
@@ -12,7 +12,7 @@ pip install nose cython pyshp shapely pil pep8 mock pyke netCDF4
 ################################
 
 ## dependencies for matplotlib (1.1, but we'll install 1.2)
-sudo apt-get build-dep matplotlib
+sudo apt-get -y -q build-dep matplotlib
 
 # matplotlib - because ubuntu doesn't have the version we need (1.2)
 wget https://github.com/downloads/matplotlib/matplotlib/matplotlib-1.2.0.tar.gz
@@ -56,17 +56,17 @@ export LDFLAGS="-fPIC -m64"
 #cd ..
 #rm jasper-1.900.1.zip
 #rm -rf jasper-1.900.1/
-sudo apt-get install libjasper-dev
+sudo apt-get -y -q install libjasper-dev
 	
 # gribapi
-sudo apt-get build-dep libgrib-api-1.9.9 libgrib-api-dev libgrib-api-tools
+sudo apt-get -y -q build-dep libgrib-api-1.9.9 libgrib-api-dev libgrib-api-tools
 
 # ubuntu 11
-#sudo apt-get install libgrib-api-0d-1 libgrib-api-dev libgrib-api-tools
+#sudo apt-get -y -q install libgrib-api-0d-1 libgrib-api-dev libgrib-api-tools
 
 # ubuntu 12 - this doesn't seem to isntall the python stuff
 
-#sudo apt-get install libgrib-api-1.9.9 libgrib-api-dev libgrib-api-tools
+#sudo apt-get -y -q install libgrib-api-1.9.9 libgrib-api-dev libgrib-api-tools
 
 wget https://software.ecmwf.int/wiki/download/attachments/3473437/grib_api-1.9.16.tar.gz --no-check-certificate
 tar -xvf grib_api-1.9.16.tar.gz
@@ -93,8 +93,8 @@ rm distribute_setup.py
 
 # geos - this gives 3.3.3, we need 3.3.4, hence the manual install above
 #sudo apt-add-repository ppa:sharpie/for-science
-#sudo apt-get update
-#sudo apt-get install libgeos-dev
+#sudo apt-get -y -q update
+#sudo apt-get -y -q install libgeos-dev
 
 # proj4
 wget http://download.osgeo.org/proj/proj-4.8.0.tar.gz
