@@ -21,12 +21,12 @@
 #rm -rf proj-4.8.0
 
 # cartopy
-git clone git://github.com/SciTools/cartopy.git
-cd cartopy
-python setup.py build
-sudo python setup.py install
-cd ..
-rm -rf cartopy
+#git clone git://github.com/SciTools/cartopy.git
+#cd cartopy
+#python setup.py build
+#sudo python setup.py install
+#cd ..
+#rm -rf cartopy
 
 
 ############

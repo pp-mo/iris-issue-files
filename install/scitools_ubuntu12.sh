@@ -3,9 +3,6 @@
 sudo apt-get -y -q update
 sudo apt-get -y -q upgrade
 
-# easy auto installs
-sudo apt-get -y -q install libudunits2-dev libhdf5-serial-dev libnetcdf-dev python2.7-dev python2.7-scipy python-pip make unzip python-setuptools git
-pip install nose cython pyshp shapely pil pep8 mock pyke netCDF4
 
 ################################
 ######### manual builds ########
@@ -21,8 +18,8 @@ cd matplotlib-1.2.0
 python setup.py build
 sudo python setup.py install
 cd ..
-rm matplotlib-1.2.0.tar.gz
-rm -rf matplotlib-1.2.0
+#rm matplotlib-1.2.0.tar.gz
+#rm -rf matplotlib-1.2.0
 
 ## geos - because ubuntu doesn't have the version we need (3.3.4)
 wget http://download.osgeo.org/geos/geos-3.3.6.tar.bz2
@@ -32,8 +29,18 @@ cd geos-3.3.6
 make
 sudo make install
 cd ..
-rm geos-3.3.6.tar.bz2
-rm -rf geos-3.3.6
+#rm geos-3.3.6.tar.bz2
+#rm -rf geos-3.3.6
+
+
+
+############################
+###### auto installs #######
+############################
+sudo apt-get -y -q install libudunits2-dev libhdf5-serial-dev libnetcdf-dev python2.7-dev python2.7-scipy python-pip make unzip python-setuptools git
+sudo pip install nose cython pyshp shapely pil pep8 mock pyke netCDF4
+
+
 
 
 ###############
@@ -54,8 +61,8 @@ export LDFLAGS="-fPIC -m64"
 #make
 #sudo make install
 #cd ..
-#rm jasper-1.900.1.zip
-#rm -rf jasper-1.900.1/
+##rm jasper-1.900.1.zip
+##rm -rf jasper-1.900.1/
 sudo apt-get -y -q install libjasper-dev
 	
 # gribapi
@@ -78,8 +85,8 @@ cd python
 sudo python setup.py install
 cd ..
 cd ..
-rm grib_api-1.9.16.tar.gz
-sudo rm -rf grib_api-1.9.16/
+#rm grib_api-1.9.16.tar.gz
+sudo #rm -rf grib_api-1.9.16/
 	
 
 ###########
@@ -88,8 +95,8 @@ sudo rm -rf grib_api-1.9.16/
 
 wget http://python-distribute.org/distribute_setup.py
 sudo python distribute_setup.py
-sudo rm distribute*.gz
-rm distribute_setup.py
+sudo #rm distribute*.gz
+#rm distribute_setup.py
 
 # geos - this gives 3.3.3, we need 3.3.4, hence the manual install above
 #sudo apt-add-repository ppa:sharpie/for-science
@@ -104,8 +111,8 @@ cd proj-4.8.0
 make
 sudo make install
 cd ..
-rm proj-4.8.0.tar.gz
-rm -rf proj-4.8.0
+#rm proj-4.8.0.tar.gz
+#rm -rf proj-4.8.0
 
 # cartopy
 git clone git://github.com/SciTools/cartopy.git
@@ -113,7 +120,7 @@ cd cartopy
 python setup.py build
 sudo python setup.py install
 cd ..
-rm -rf cartopy
+#rm -rf cartopy
 
 
 ############
@@ -126,7 +133,7 @@ python setup.py build
 sudo python setup.py install
 cd ..
 # TODO: we shouldn't need sudo for this
-sudo rm -rd iris
+sudo #rm -rd iris
 
 
 #
