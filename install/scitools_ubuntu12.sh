@@ -86,7 +86,7 @@ sudo python setup.py install
 cd ..
 cd ..
 #rm grib_api-1.9.16.tar.gz
-sudo #rm -rf grib_api-1.9.16/
+#sudo rm -rf grib_api-1.9.16/
 	
 
 ###########
@@ -95,7 +95,7 @@ sudo #rm -rf grib_api-1.9.16/
 
 wget http://python-distribute.org/distribute_setup.py
 sudo python distribute_setup.py
-sudo #rm distribute*.gz
+#sudo rm distribute*.gz
 #rm distribute_setup.py
 
 # geos - this gives 3.3.3, we need 3.3.4, hence the manual install above
@@ -133,7 +133,7 @@ python setup.py build
 sudo python setup.py install
 cd ..
 # TODO: we shouldn't need sudo for this
-sudo #rm -rd iris
+#sudo rm -rd iris
 
 
 #
