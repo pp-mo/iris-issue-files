@@ -302,3 +302,8 @@ if __name__ == "__main__":
     print "\n-------------------------\n"
 
 
+
+    # WE CAN ALSO EXAMINE THE SERVER USING THIS URL:
+    # http://exxvmgpmdev0.meto.gov.uk:8399/arcgis/rest/services
+
+
