@@ -43,6 +43,7 @@ sudo pip install nose cython pyshp shapely pil pep8 mock pyke netCDF4
 
 
 
+
 ###############
 ### gribapi ###
 ###############
@@ -103,6 +104,7 @@ sudo python distribute_setup.py
 #sudo apt-get -y -q update
 #sudo apt-get -y -q install libgeos-dev
 
+
 # proj4
 wget http://download.osgeo.org/proj/proj-4.8.0.tar.gz
 tar -xvf proj-4.8.0.tar.gz
@@ -115,8 +117,9 @@ cd ..
 #rm -rf proj-4.8.0
 
 # cartopy
-git clone git://github.com/SciTools/cartopy.git
+git clone https://github.com/SciTools/cartopy.git
 cd cartopy
+python setup.py build_ext -I/usr/local/include -L/usr/local/lib -R/usr/local/lib
 python setup.py build
 sudo python setup.py install
 cd ..
@@ -127,7 +130,7 @@ cd ..
 ### iris ###
 ############
 
-git clone git://github.com/SciTools/iris.git
+git clone https://github.com/SciTools/iris.git
 cd iris
 python setup.py build
 sudo python setup.py install
